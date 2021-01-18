@@ -77,6 +77,7 @@ def next_letter():
         vals        = pairs[l].values()
         distr       = [val / sum(vals) for val in vals]
         cond_h[l]   = entropy(distr)
+        print(f'{l} & $\\h(Y | X = {l}) = {cond_h[l]}$ \\\\')
 
     y_x_entropy = sum([p_x[l] * cond_h[l] for l in abc])
 
